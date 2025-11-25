@@ -375,8 +375,8 @@ function App() {
         return;
     }
 
-    const dbHost = "localhost:3000";
-    const dbName = "vibe-multiplayer";
+    const dbHost = "maincloud.spacetimedb.com";
+    const dbName = "vape-goblin-town";
 
     console.log(`Connecting to SpacetimeDB at ${dbHost}, database: ${dbName}...`);
 
@@ -405,7 +405,7 @@ function App() {
     };
 
     moduleBindings.DbConnection.builder()
-      .withUri(`ws://${dbHost}`)
+      .withUri(`wss://${dbHost}`)
       .withModuleName(dbName)
       .onConnect(onConnect)
       .onDisconnect(onDisconnect)
